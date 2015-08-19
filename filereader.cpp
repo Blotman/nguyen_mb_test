@@ -10,7 +10,7 @@ FileReader::FileReader(QObject *parent) : QObject(parent)
 QString FileReader::readData()
 {
     QString data;
-    QFile file("C:\\cpuinfo.txt");
+    QFile file("/proc/cpuinfo");
 
     if ( file.open(QIODevice::ReadOnly) )
     {
